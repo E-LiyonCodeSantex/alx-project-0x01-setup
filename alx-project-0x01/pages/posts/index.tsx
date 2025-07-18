@@ -5,6 +5,7 @@ import PostCard from '@/components/common/PostCard';
 const samplePosts = [
   { title: 'Post One', body: 'Body of post one', userId: 1 },
   { title: 'Post Two', body: 'Body of post two', userId: 2 },
+  { title: 'Post three', body: 'Body of post three', userId: 3 },
 ];
 
 const Posts: React.FC = () => {
