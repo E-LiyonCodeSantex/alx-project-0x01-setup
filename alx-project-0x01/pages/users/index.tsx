@@ -2,11 +2,11 @@ import UserCard from "@/components/common/UserCard";
 import Header from "@/components/layout/Header";
 import { UserProps } from "@/interfaces";
 
-interface UsersProps {
+interface UsersPageProps {
   posts: UserProps[];
 }
 
-const Users: React.FC<UsersProps> = ({ posts }) => {
+const Users: React.FC<UsersPageProps> = ({ posts }) => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -24,7 +24,7 @@ const Users: React.FC<UsersProps> = ({ posts }) => {
 
 export async function getStaticProps() {
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  const posts = await response.json();
+  const posts: UserProps[] = await response.json();
 
   return {
     props: {
