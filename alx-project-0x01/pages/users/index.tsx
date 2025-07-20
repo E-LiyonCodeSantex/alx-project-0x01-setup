@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import UserCard from "@/components/common/UserCard";
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import UserModal from '@/components/common/UserModal';
 import { UserData, UserProps } from "@/interfaces";
 
@@ -41,6 +42,7 @@ const Users: React.FC<UsersPageProps> = ({ posts }) => {
           onSubmit={handleAddUser}
           />
       </main>
+      <Footer />
     </div>
   );
 };
